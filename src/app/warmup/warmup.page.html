@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Warmup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <h1> Warming Up</h1>
+    <p>{{ totalTime }}</p>
+
+  </div>
+
+
+  <div>
+
+    <ion-card>
+      <ion-item class="float">
+
+        <p>Warmup 1</p>
+        <p> {{ Time }}</p>
+        <img src="../../assets/img/warmup1.jpg" class="img">
+
+      </ion-item>
+
+      <ion-item class="float">
+
+        <p>Warmup 2</p>
+        <p> {{ Time2 }}</p>
+        <img src="../../assets/img/warmup2.jpg" class="img">
+
+      </ion-item>
+
+      <ion-item class="float">
+        <p>Warmup 3</p>
+        <p> {{ Time3 }}</p>
+        <img src="../../assets/img/warmup3.jpg" class="img">
+      </ion-item>
+
+
+      <ion-item class="float">
+        <p>Warmup 4</p>
+        <p> {{ Time4 }}</p>
+        <img src="../../assets/img/warmup4.jpg" class="img">
+      </ion-item>
+
+      <ion-button (click)="startTimer()">
+        S T A R T
+      </ion-button>
+
+    </ion-card>
+
+
+
+  </div>
+</ion-content>
