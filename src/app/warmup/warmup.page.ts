@@ -8,7 +8,14 @@ import { NavController, ToastController } from '@ionic/angular';
 })
 export class WarmupPage implements OnInit {
 
-  constructor( private navCtrl : NavController , private toastCtrl : ToastController) { }
+  timeArray = [];
+
+  constructor( private navCtrl : NavController , private toastCtrl : ToastController) { 
+
+
+  }
+
+
 
   ngOnInit() {
   }

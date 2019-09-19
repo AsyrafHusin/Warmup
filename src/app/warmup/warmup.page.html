@@ -18,7 +18,8 @@
       <ion-item class="float">
 
         <p>Warmup 1</p>
-        <p> {{ Time }}</p>
+
+        <p> {{ timeArray.timer1 }}</p>
         <img src="../../assets/img/warmup1.jpg" class="img">
 
       </ion-item>
@@ -44,12 +45,12 @@
         <img src="../../assets/img/warmup4.jpg" class="img">
       </ion-item>
 
-      <ion-button (click)="startTimer()">
-        S T A R T
-      </ion-button>
-
+      
     </ion-card>
-
+    
+    <ion-button (click)="startTimer()">
+      S T A R T
+    </ion-button>
 
 
   </div>
