@@ -1,24 +1,27 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-        <ion-icon name="arrow-back" (click)="warmup()"></ion-icon>
-      startTimer</ion-title>
+      <ion-icon name="arrow-back" (click)="warmup()"></ion-icon>
+      startTimer
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <div class="layout" > Layout </div>
 
-  <p>{{ timer }}</p>
+
+  <p>{{ timer }}""</p>
 
 
   <div>
-    <ion-icon name="arrow-dropleft"  class="arw" id="back"></ion-icon>
+    <ion-icon name="arrow-dropleft" class="arw" id="back"></ion-icon>
   </div>
-  
+
   <div>
-    <ion-icon name="arrow-dropright"  (click)="next()" class="arw" id="next"></ion-icon>
-  </div>    
+    <ion-icon name="arrow-dropright" (click)="next()" class="arw" id="next"></ion-icon>
+  </div>
 
 
   <button (click)="start()" [hidden]="true" id="start">Start</button>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title>
+        <ion-icon name="arrow-back" (click)="backbtn()"></ion-icon>
+        Warmup 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  
+    <div class="layout" > Layout </div>
+
+
+    <p>{{ timer }}</p>
+  
+  
+    <div>
+      <ion-icon name="arrow-dropleft" (click)="back()" class="arw" id="back"></ion-icon>
+    </div>
+  
+    <div>
+      <ion-icon name="arrow-dropright" (click)="next()" class="arw" id="next"></ion-icon>
+    </div>
+  
+  
+    <button (click)="start()" [hidden]="true" id="startwarmup2">Start</button>
+    <button (click)="stop()">Stop</button>
+  
+</ion-content>

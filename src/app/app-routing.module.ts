@@ -6,6 +6,8 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'warmup', loadChildren: './warmup/warmup.module#WarmupPageModule' },
   { path: 'startTimer', loadChildren: './start-timer/start-timer.module#StartTimerPageModule' },
+  { path: 'warmup1', loadChildren: './warmup1/warmup1.module#Warmup1PageModule' },
+  { path: 'warmup2', loadChildren: './warmup2/warmup2.module#Warmup2PageModule' },
 ];
 
 @NgModule({
