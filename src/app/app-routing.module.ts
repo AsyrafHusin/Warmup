@@ -8,6 +8,11 @@ const routes: Routes = [
   { path: 'startTimer', loadChildren: './start-timer/start-timer.module#StartTimerPageModule' },
   { path: 'warmup1', loadChildren: './warmup1/warmup1.module#Warmup1PageModule' },
   { path: 'warmup2', loadChildren: './warmup2/warmup2.module#Warmup2PageModule' },
+  { path: 'routines', loadChildren: './routines/routines.module#RoutinesPageModule' },
+  { path: 'routinesC', loadChildren: './routines-c/routines-c.module#RoutinesCPageModule' },
+  { path: 'routinesD', loadChildren: './routines-d/routines-d.module#RoutinesDPageModule' },
+  { path: 'routinesS', loadChildren: './routines-s/routines-s.module#RoutinesSPageModule' },
+  { path: 'Croutines', loadChildren: './c-routines/c-routines.module#CRoutinesPageModule' },
 ];
 
 @NgModule({
