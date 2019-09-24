@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController } from '@ionic/angular';
-import { async } from 'q';
+
 
 @Component({
   selector: 'app-warmup2',
@@ -51,6 +51,7 @@ started = null;
         if (this.timer == 5){
           this.timer = 0 ;
           clearInterval(intervalVars);
+          this.navCtrl.navigateForward('/warmup3')
           console.log('next');
 
           const toast = await this.toastController.create({
@@ -85,6 +86,10 @@ started = null;
     this.timer = "0";
     console.log('stopped')
     this.running = false;
+  }
+  next(){
+    this.navCtrl.navigateForward('/warmup3')
+    this.stop();
   }
 
 

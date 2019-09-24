@@ -13,6 +13,11 @@ const routes: Routes = [
   { path: 'routinesD', loadChildren: './routines-d/routines-d.module#RoutinesDPageModule' },
   { path: 'routinesS', loadChildren: './routines-s/routines-s.module#RoutinesSPageModule' },
   { path: 'Croutines', loadChildren: './c-routines/c-routines.module#CRoutinesPageModule' },
+  { path: 'warmup3', loadChildren: './warmup3/warmup3.module#Warmup3PageModule' },
+  { path: 'warmup4', loadChildren: './warmup4/warmup4.module#Warmup4PageModule' },
+  { path: 'warmup5', loadChildren: './warmup5/warmup5.module#Warmup5PageModule' },
+  { path: 'warmup6', loadChildren: './warmup6/warmup6.module#Warmup6PageModule' },
+  { path: 'results', loadChildren: './results/results.module#ResultsPageModule' },
 ];
 
 @NgModule({

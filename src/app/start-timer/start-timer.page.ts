@@ -12,6 +12,7 @@ export class StartTimerPage implements OnInit {
   maxTimer = 0;
   timer = 0;
   stat = null;
+  stats = null;
   running = false;
  
 
@@ -67,6 +68,7 @@ start(){
           toast.present();
         }
       }.bind(this),1000,1000)
+      this.stats = intervals
     }
   
 
@@ -79,6 +81,7 @@ start(){
 
 stop(){
   clearInterval(this.stat)
+  clearInterval(this.stats)
   this.timer = 0;
   console.log('stopped')
 }

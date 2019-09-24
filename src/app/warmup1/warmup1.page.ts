@@ -10,6 +10,7 @@ export class Warmup1Page implements OnInit {
 
   timer = "0"
   starts = null;
+  started = null;
   running = false;
 
   constructor(private navCtrl : NavController, private toast : ToastController) { }
@@ -25,7 +26,42 @@ start(){
     var interval = setInterval(async function(){
       this.timer++;
 
-      const toast = await this.toast.create
+      if ( this.timer == 5){
+        console.log ('rest');
+        this.timer = 0;
+        clearInterval(interval);
+
+        const toast = await this.toast.create({
+              message : 'Rest',
+              duration : 1000,
+              position : "middle",
+              animated : true 
+            });
+            toast.present();
+
+        var intervals = setInterval( async function(){
+          this.timer++;
+
+          
+          if (this.timer == 5 ){
+            this.timer = 0;
+            clearInterval(intervals);
+            console.log('next')
+            this.navCtrl.navigateForward('/warmup2')
+            
+            
+            const toast = await this.toast.create({
+              message : 'nxt',
+              duration : 1000,
+              position : "middle",
+              animated : true 
+            })
+            toast.present();  
+          }
+        }.bind(this),1000,1000)
+        this.started = intervals
+      }
+
   
     }.bind(this),1000, 1000)
     this.starts = interval;
@@ -37,6 +73,7 @@ start(){
 
 stop(){
   clearInterval(this.starts)
+  clearInterval(this.started)
   this.timer = "0";
   console.log('stopped')
   this.running = false;

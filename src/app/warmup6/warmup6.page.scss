@@ -1,0 +1,31 @@
+.layout {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    padding: 30px 30px 40px 20px; 
+    margin: auto;
+}
+
+.arw{
+    height: 40px;
+    width: 40px;
+}
+
+#back{
+    
+    position: absolute;
+}
+
+#next{
+    float: right;
+}
+
+button{
+    margin-left: 100px;
+    margin-top: 300px;
+}
+
+p{
+    position: absolute;
+    margin-left: 200px;
+}
