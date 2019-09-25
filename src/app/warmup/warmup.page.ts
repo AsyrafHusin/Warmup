@@ -32,5 +32,8 @@ export class WarmupPage implements OnInit {
    this.navCtrl.navigateForward('/startTimer')
   } 
   
+  home(){
+    this.navCtrl.navigateRoot('/home')
+  }
 
 }
