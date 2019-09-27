@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>routinesList</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<div padding>
+		<ion-list >
+			<ion-item  *ngFor="let todo of routines; let i = index">
+          <button ion-button (click)="addRoutine(i)"><ion-icon name="add"></ion-icon></button>
+          <ion-label>
+            <h2> {{todo["name"]}}</h2>
+            <p> {{todo["time"]}}</p>
+            <p>{{todo["reps"]}}</p>
+          </ion-label>
+			</ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item lines="none" *ngFor = "let name of routineName"> 
+      <p>{{ name.name}}</p>
+    </ion-item>
+    </ion-list>
+
+
+
+    
+	</div> 
+</ion-content>

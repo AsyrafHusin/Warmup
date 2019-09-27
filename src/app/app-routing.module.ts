@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'warmup5', loadChildren: './warmup5/warmup5.module#Warmup5PageModule' },
   { path: 'warmup6', loadChildren: './warmup6/warmup6.module#Warmup6PageModule' },
   { path: 'results', loadChildren: './results/results.module#ResultsPageModule' },
+  { path: 'routines-list', loadChildren: './routines-list/routines-list.module#RoutinesListPageModule' },
 ];
 
 @NgModule({

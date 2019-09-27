@@ -15,5 +15,9 @@ export class RoutinesCPage implements OnInit {
   ngOnInit() {
   }
 
+  addRoutine(){
+    
+  }
+
 
 }
