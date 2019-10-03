@@ -134,7 +134,7 @@ intervalB:any=false
             }else if(this.loop == 0 ){
               this.runToastC();
               this.showRoutineN();
-
+              this.overallProgress = 0;
             }
           }
         }, 1000, 1000)

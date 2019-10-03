@@ -59,7 +59,7 @@ export class Warmup6Page implements OnInit {
             this.timer = 0 ;
             this.current = this.timer;
             clearInterval(intervalVars);
-            this.navCtrl.navigateForward('/results')
+            this.navCtrl.navigateForward('/warmup')
             console.log('next');
   
             const toast = await this.toastController.create({
@@ -98,7 +98,7 @@ export class Warmup6Page implements OnInit {
       this.running = false;
     }
     next(){
-      this.navCtrl.navigateForward('/results')
+      this.navCtrl.navigateForward('/warmup')
       this.stop();
     }
 

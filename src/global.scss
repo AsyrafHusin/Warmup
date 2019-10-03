@@ -24,3 +24,8 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-content {
+    --background: linear-gradient(to right top, #89fbc4, #7ef6bd, #73f0b5, #67ebae, #5be5a7, #5fe3a2, #63e29d, #67e098, #79e195, #89e292, #98e290, #a5e38f);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}

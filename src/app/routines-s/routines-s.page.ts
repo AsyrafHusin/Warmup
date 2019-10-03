@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, ModalController, PopoverController, ToastController } from '@ionic/angular';
-
+import { IonRouterOutlet } from '@ionic/angular';
 @Component({
   selector: 'app-routines-s',
   templateUrl: './routines-s.page.html',
@@ -17,7 +17,7 @@ export class RoutinesSPage implements OnInit {
   intervalA: any = false
   intervalB: any = false
 
-  constructor(private navCtrl: NavController, private toastCtrl: ToastController) {
+  constructor(private navCtrl: NavController, private toastCtrl: ToastController, private routerOutlet: IonRouterOutlet) {
 
     let routine: any = [
       {
@@ -38,12 +38,19 @@ export class RoutinesSPage implements OnInit {
 
   }
 
+  ionViewWillEnter(){
+    this.routerOutlet.swipeGesture = false;
+  }
+
+
   ngOnInit() {
     document.getElementById("progressBar").style.display = "none"
     document.getElementById("round").style.display = "none"
     document.getElementById("timer").style.display = "none"
     document.getElementById("nbtn").style.display = "none"
     document.getElementById("bbtn").style.display = "none"
+
+   
   }
 
 
