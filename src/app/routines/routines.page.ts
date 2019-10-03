@@ -24,6 +24,9 @@ export class RoutinesPage implements OnInit {
     this.navCtrl.navigateForward('/routinesS')
   }
 
+  home(){
+    this.navCtrl.navigateRoot('/home')
+  }
  
 
  selection(){

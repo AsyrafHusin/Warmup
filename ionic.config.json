@@ -1,5 +1,7 @@
 {
   "name": "Warmup",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

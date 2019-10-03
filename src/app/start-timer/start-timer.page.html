@@ -14,6 +14,25 @@
 
   <p>{{ timer }}""</p>
 
+  <round-progress 
+  [current]="current " 
+  [max]="max" 
+  [color]="'#45ccce'" 
+  [background]="'#eaeaea'"
+  [radius]="90" 
+  [stroke]="20" 
+  [semicircle]="false" 
+  [rounded]="true" 
+  [clockwise]="false"
+  [responsive]="false"
+  [duration]="800" 
+  [animation]="'easeInOutQuart'" 
+  [animationDelay]="0">
+</round-progress>
+
+
+
+
 
   <div>
     <ion-icon name="arrow-dropleft" class="arw" id="back"></ion-icon>

@@ -6,29 +6,38 @@
 
 <ion-content>
 
-  <ion-label>
+  <ion-label padding  >
     <p>You Have Completed This warmup</p>
   </ion-label>
 
   <div>
     <ion-card>
-      <h1> Duration </h1>
-      <h3>{{ timeTaken }}</h3>
+      <ion-card-content>
+        <h1> Duration </h1>
+
+      </ion-card-content>
     </ion-card>
   </div>
 
   <div>
     <ion-card>
-      <h1> Calories Burned </h1>
-      <h3>{{ calBurn }}</h3>
+      <ion-card-content>
+        <h1> Calories Burned </h1>
+      
+      </ion-card-content>
     </ion-card>
   </div>
-  
-    <div>
-      <ion-card>
+
+  <div>
+    <ion-card>
+      <ion-card-content>
         <h1> Completed Warmups </h1>
-        <h3>{{ completion }}</h3>
-      </ion-card>
-    </div>
+       
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+  <ion-button (click)="home()">Main menu</ion-button>
 
 </ion-content>

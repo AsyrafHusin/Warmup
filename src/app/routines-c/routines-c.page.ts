@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 
 
 
@@ -10,13 +10,17 @@ import { ModalController } from '@ionic/angular';
 })
 export class RoutinesCPage implements OnInit {
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController , private navCtrl : NavController) { }
 
-  ngOnInit() {
+  ngOnInit( ) {
   }
 
   addRoutine(){
     
+  }
+
+  routines(){
+    this.navCtrl.navigateBack('/routines')
   }
 
 

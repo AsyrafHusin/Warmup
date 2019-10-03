@@ -11,6 +11,14 @@ export class Warmup5Page implements OnInit {
   tVariable = null;
   rVariable = null;
   running = false;
+
+  //Round Progress 
+current: number = 0;
+max: number = 5;
+stroke: number = 10;
+radius: number = 100;
+
+
     constructor(private navCtrl : NavController , private toastController : ToastController) { }
   
     ngOnInit() {
@@ -22,8 +30,10 @@ export class Warmup5Page implements OnInit {
   
       var intervalVar = setInterval( async function(){
         this.timer++;
+        this.current = this.timer;
         if(this.timer == 5){
           this.timer = 0
+          this.current = this.timer;
           clearInterval(intervalVar);
           console.log('rest')
   
@@ -37,8 +47,10 @@ export class Warmup5Page implements OnInit {
   
           var intervalVarR = setInterval( async function(){
             this.timer++;
+            this.current = this.timer
             if(this.timer == 5){
               this.timer = 0; 
+              this.current = this.timer;
               clearInterval(intervalVarR);
               this.navCtrl.navigateForward('/warmup6')
               console.log('next');
@@ -64,7 +76,8 @@ export class Warmup5Page implements OnInit {
    stop(){
      clearInterval(this.tVariable)
      clearInterval(this.rVariable)
-     this.timer = 0
+     this.timer = 0;
+    this.current = 0; 
      console.log('stopped')
    }
   
@@ -74,6 +87,10 @@ export class Warmup5Page implements OnInit {
   
    next(){
      this.navCtrl.navigateForward('/warmup6')
+     this.stop();
+   }
+   back(){
+     this.navCtrl.navigateBack('/warmup4')
      this.stop();
    }
   

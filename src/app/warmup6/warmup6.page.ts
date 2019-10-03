@@ -10,6 +10,13 @@ export class Warmup6Page implements OnInit {
   timer = "0";
   running = false;
   started = null;
+  starts = null;
+   //Round Progress 
+   current: number = 0;
+   max: number = 5;
+   stroke: number = 10;
+   radius: number = 100;
+ 
   
   
   
@@ -28,9 +35,10 @@ export class Warmup6Page implements OnInit {
   
       var intervalVar = setInterval( async function(){
         this.timer++;
-  
+        this.current = this.timer
       if(this.timer == 5){
         this.timer = 0;
+        this.current = this.current;
         clearInterval(intervalVar);
         console.log('rest');
         
@@ -46,9 +54,10 @@ export class Warmup6Page implements OnInit {
         
         var intervalVars = setInterval( async function(){
           this.timer++;
-  
+          this.current = this.timer;
           if (this.timer == 5){
             this.timer = 0 ;
+            this.current = this.timer;
             clearInterval(intervalVars);
             this.navCtrl.navigateForward('/results')
             console.log('next');
@@ -62,7 +71,7 @@ export class Warmup6Page implements OnInit {
             toast.present();
           }
         }.bind(this),1000,1000)
-  
+        this.starts = intervalVars
       }
   
       }.bind(this),1000,1000)
@@ -74,7 +83,7 @@ export class Warmup6Page implements OnInit {
        
     }
   
-    backbtn(){
+    warmup(){
       this.navCtrl.navigateBack('/warmup')
       this.stop()
     }
@@ -82,12 +91,19 @@ export class Warmup6Page implements OnInit {
   
     stop(){
       clearInterval(this.started)
+      clearInterval(this.starts)
       this.timer = "0";
+      this.current = 0;
       console.log('stopped')
       this.running = false;
     }
     next(){
       this.navCtrl.navigateForward('/results')
+      this.stop();
+    }
+
+    back(){
+      this.navCtrl.navigateBack('/warmup5')
       this.stop();
     }
   

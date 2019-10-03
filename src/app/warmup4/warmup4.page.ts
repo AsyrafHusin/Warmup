@@ -12,6 +12,12 @@ timer = 0;
 tVariable = null;
 rVariable = null;
 running = false;
+
+//Round Progress 
+current: number = 0;
+max: number = 5;
+stroke: number = 10;
+radius: number = 100;
   constructor(private navCtrl : NavController , private toastController : ToastController) { }
 
   ngOnInit() {
@@ -23,8 +29,10 @@ running = false;
 
     var intervalVar = setInterval( async function(){
       this.timer++;
+      this.current = this.timer;
       if(this.timer == 5){
         this.timer = 0
+        this.current = this.timer;
         clearInterval(intervalVar);
         console.log('rest')
 
@@ -38,6 +46,7 @@ running = false;
 
         var intervalVarR = setInterval( async function(){
           this.timer++;
+          this.current = this.timer;
           if(this.timer == 5){
             this.timer = 0; 
             clearInterval(intervalVarR);
@@ -66,6 +75,7 @@ running = false;
    clearInterval(this.tVariable)
    clearInterval(this.rVariable)
    this.timer = 0
+   this.current = 0;
    console.log('stopped')
  }
 

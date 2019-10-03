@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { Warmup5Page } from './warmup5.page';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    RoundProgressModule
   ],
   declarations: [Warmup5Page]
 })

@@ -14,12 +14,19 @@ export class StartTimerPage implements OnInit {
   stat = null;
   stats = null;
   running = false;
+  
+  //Round Progress 
+  current: number = 0;
+  max: number = 5;
+  stroke: number = 10;
+  radius: number = 100;
+
  
 
 
   constructor(private navCtrl : NavController , private toastController : ToastController) { 
 
-   
+  
   }
 
   ngOnInit() {
@@ -36,8 +43,10 @@ start(){
 
   var interval = setInterval(async function(){
     this.timer++;
+    this.current = this.timer;
     if(this.timer == 5){
       this.timer = 0 ;
+      this.current = this.timer
       clearInterval(interval);
       console.log ('rest');
 
@@ -53,9 +62,11 @@ start(){
 
       var intervals = setInterval(async function(){
         this.timer++;
+        this.current = this.timer
         if(this.timer == 5){
           this.navCtrl.navigateForward('/warmup1')
           this.timer = 0;
+          this.current = this.timer
           clearInterval(intervals)
           console.log('next');
 
@@ -83,6 +94,7 @@ stop(){
   clearInterval(this.stat)
   clearInterval(this.stats)
   this.timer = 0;
+  this.current = 0 ;
   console.log('stopped')
 }
 

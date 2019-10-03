@@ -11,7 +11,7 @@
           <button ion-button (click)="addRoutine(i)"><ion-icon name="add"></ion-icon></button>
           <ion-label>
             <h2> {{todo["name"]}}</h2>
-            <p> {{todo["time"]}}</p>
+            <p> {{todo["time"]}} seconds</p>
             <p>{{todo["reps"]}}</p>
           </ion-label>
 			</ion-item>
@@ -19,9 +19,45 @@
 
     <ion-list>
       <ion-item lines="none" *ngFor = "let name of routineName"> 
-      <p>{{ name.name}}</p>
+      <p>{{ routineName }}</p>
     </ion-item>
     </ion-list>
+
+
+    
+    <circle-progress 
+    
+    [percent]="percent" 
+    [maxPercent] = "maxTimer"
+    [radius]="radius" 
+    [showTitle]="false"
+    [showSubtitle]="false"
+    [showUnits]="false"
+    [innerStrokeWidth]="8" 
+    [outerStrokeWidth]="20" 
+    [innerStrokeColor]="'#78C000'" 
+    [outerStrokeColor]="'#C7E596'" 
+    [animation]="false" 
+    [animationDuration]="100"
+    [showInnerStroke] ="false">
+    
+    </circle-progress>
+
+    <p>{{ timer }}</p>
+  
+  
+    <!-- <div>
+      <ion-icon name="arrow-dropleft" (click)="back()" class="arw" id="back"></ion-icon>
+    </div> -->
+  
+    <!-- <div>
+      <ion-icon name="arrow-dropright" (click)="next()" class="arw" id="next"></ion-icon>
+    </div>
+   -->
+  
+    <button (click)="start()"  id="startwarmup2">Start</button>
+    <button (click)="stop()">Stop</button>
+  
 
 
 
