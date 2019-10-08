@@ -1,23 +1,27 @@
 <ion-header>
-  <ion-toolbar color = "primary">
+  <ion-toolbar >
     <ion-title>
-      Home
+      <ion-icon name="arrow-back"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    <ion-card (click)="warmup()" class="warmup">
-      <ion-label >
-        Warmup
-      </ion-label>
-    </ion-card>
+ 
 
-    <ion-card (click)="routines()" class="routines">
-      <ion-label >
-        Routines
+   <ion-card (click)="warmup()" class="warmup">
+     <ion-label color="light" >
+       WARMUP
       </ion-label>
     </ion-card>
-  </div>
+ 
+
+
+  <ion-card (click)="routines()" class="routines">
+    <ion-label color="light">
+      ROUTINES
+    </ion-label>
+  </ion-card>
+
+
 </ion-content>

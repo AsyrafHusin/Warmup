@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { isNgTemplate } from '@angular/compiler';
+
+
 
 @Component({
   selector: 'app-routines-list',
@@ -24,7 +25,7 @@ export class RoutinesListPage implements OnInit {
   percent: number = 0;
   radius: number = 100;
 
-  constructor(public alertCtrl: AlertController, ) {
+  constructor(public alertCtrl: AlertController ) {
 
 
     this.routines = [
@@ -57,7 +58,7 @@ export class RoutinesListPage implements OnInit {
 
     if (this.routineName.length < this.routines.length) {
       this.routineName = [
-        this.routines[number].name.concat(this.routines[number].time, this.routines[number].reps)
+        this.routines[number].name.concat(this.routines[number].time , this.routines[number].reps)
       ],
 
 
@@ -66,7 +67,7 @@ export class RoutinesListPage implements OnInit {
         this.task = this.routines[number].time
       this.timer = this.task;
       this.maxTimer = this.task
-
+      this.percent = this.timer;
 
     }
 

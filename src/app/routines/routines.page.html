@@ -7,29 +7,27 @@
 </ion-header>
 
 <ion-content>
-  <ion-card class="content">
-    <ion-card-header>
-      <div class="img"></div>
-      <ion-card-subtitle>Static </ion-card-subtitle>
-      <ion-card-title>Routine 1</ion-card-title>
-      <ion-button class="btnpadding" (click)="routinesS()">start</ion-button>
-    </ion-card-header>
-  </ion-card>
-
-  <ion-card class="content">
+    <ion-card class="content" id="routin1"  >
       <ion-card-header>
-        <div class="img"></div>
-        <ion-card-subtitle>Dynamic </ion-card-subtitle>
-        <ion-card-title>Routine 2</ion-card-title>
+        <ion-card-subtitle color="light">Static </ion-card-subtitle>
+        <ion-card-title color="light">Routine 1</ion-card-title>
+          <ion-button class="btnpadding" (click)="routinesS()">start</ion-button>
+      </ion-card-header>
+    </ion-card>
+
+  <ion-card class="content" id="routin2">
+      <ion-card-header>
+        <ion-card-subtitle color="light">Dynamic </ion-card-subtitle>
+        <ion-card-title color="light">Routine 2</ion-card-title>
         <ion-button class="btnpadding" (click)="routinesD()"> start</ion-button>
       </ion-card-header>
     </ion-card>
   
-
+    
 <ion-card class="content" id="custom">
   <ion-card-header>
-    <ion-card-subtitle>Add your favourite workouts </ion-card-subtitle>
-    <ion-card-title>My training</ion-card-title>
+    <ion-card-subtitle color="light">Add your favourite workouts </ion-card-subtitle>
+    <ion-card-title color="light">My training</ion-card-title>
     <ion-button class="btnpadding" (click)="routinesC()"> start</ion-button>
   </ion-card-header>
 </ion-card>

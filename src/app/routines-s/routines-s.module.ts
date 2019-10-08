@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { RoutinesSPage } from './routines-s.page';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -26,3 +27,4 @@ const routes: Routes = [
   declarations: [RoutinesSPage]
 })
 export class RoutinesSPageModule {}
+

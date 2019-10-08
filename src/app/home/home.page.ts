@@ -7,8 +7,9 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  constructor( private navCtrl : NavController ) {
 
-  constructor( private navCtrl : NavController) {}
+  }
 
   warmup(){
   this.navCtrl.navigateForward('/warmup')

@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StartTimerPage } from './start-timer.page';
+import { RdInfoPage } from './rd-info.page';
 
-describe('StartTimerPage', () => {
-  let component: StartTimerPage;
-  let fixture: ComponentFixture<StartTimerPage>;
+describe('RdInfoPage', () => {
+  let component: RdInfoPage;
+  let fixture: ComponentFixture<RdInfoPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StartTimerPage ],
+      declarations: [ RdInfoPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StartTimerPage);
+    fixture = TestBed.createComponent(RdInfoPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,75 +1,96 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
-        <ion-icon name="arrow-back" (click)="home()"></ion-icon>
-        Warmup</ion-title>
+<ion-content>
+  <ion-header>
+    <ion-toolbar  >
+  <ion-title>
+    <ion-icon name="arrow-back" (click)="home()"></ion-icon>
+    Warmup</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div padding>
-    <h1> Warming Up</h1>
+
+
+<ion-progress-bar [value]="overallProgress"  id="progressBar"></ion-progress-bar>
+  <ion-item class="float" id="routine1" >
+
+    <p>Knee Hug</p>
+
+    <p> </p>
+    <img src="../../assets/img/warmup1.jpg" class="img" >
+
+  </ion-item>
+
+  <ion-item class="float" id="routine2">
+
+    <p>Quad Stretch</p>
    
+    <img src="../../assets/img/warmup2.jpg" class="img" >
 
-  </div>
+  </ion-item>
 
-
-  <div>
-
-    <ion-card>
-      <ion-item class="float">
-
-        <p>Warmup 1</p>
-
-        
-        <img src="../../assets/img/warmup1.jpg" class="img">
-
-      </ion-item>
-
-      <ion-item class="float">
-
-        <p>Warmup 2</p>
+  <ion-item class="float" id="routine3">
+    <p>Knee Hug</p>
    
-        <img src="../../assets/img/warmup2.jpg" class="img">
-
-      </ion-item>
-
-      <ion-item class="float">
-        <p>Warmup 3</p>
-     
-        <img src="../../assets/img/warmup3.jpg" class="img">
-      </ion-item>
+    <img src="../../assets/img/warmup3.jpg" class="img" >
+  </ion-item>
 
 
-      <ion-item class="float">
-        <p>Warmup 4</p>
+  <ion-item class="float" id="routine4">
+    <p>Leg Pull</p>
+   
+    <img src="../../assets/img/warmup4.jpg" class="img">
+  </ion-item>
+
   
-        <img src="../../assets/img/warmup4.jpg" class="img">
-      </ion-item>
+  <ion-item class="float" id="routine5">
+    <p>Leg Sweeps</p>
+   
+    <img src="../../assets/img/warmup4.jpg" class="img">
+  </ion-item>
 
-      
-      <ion-item class="float">
-        <p>Warmup 5</p>
-       
-        <img src="../../assets/img/warmup4.jpg" class="img">
-      </ion-item>
-
-      
-      <ion-item class="float">
-        <p>Warmup 6</p>
-        
-        <img src="../../assets/img/warmup4.jpg" class="img">
-      </ion-item>
-
-
-      
-      
-    </ion-card>
+  
+  <ion-item class="float" id="routine6">
+    <p>Hip Stretch</p>
     
-    <ion-button (click)="startTimer()">
-      S T A R T
-    </ion-button>
+    <img src="../../assets/img/warmup4.jpg" class="img">
+  </ion-item>
 
 
+  <div id="bbtn">
+    <ion-icon name="arrow-dropleft"  class="arw" (click)="nextB()" id="back"></ion-icon>
   </div>
+  
+  <div id="nbtn">
+    <ion-icon name="arrow-dropright"  (click)="nextR()" class="arw" id="next"></ion-icon>
+  </div>   
+
+  <p class="progress" id="timer">{{timer}}</p>
+  <round-progress 
+  [current]="timer " 
+  [max]="maxTimer" 
+  [color]="'#45ccce'" 
+  [background]="'#eaeaea'"
+  [radius]="100" 
+  [stroke]="20" 
+  [semicircle]="false" 
+  [rounded]="true" 
+  [clockwise]="false"
+  [responsive]="false"
+  [duration]="800" 
+  [animation]="'easeInOutQuart'" 
+  [animationDelay]="0" id="round">
+</round-progress>
+ 
+
+<ion-button (click)="startTimer()" [hidden]="started">
+  S T A R T
+</ion-button>
+<!-- <ion-button (click)="stopTimer()" class="stop" >
+ Stop
+</ion-button> -->
+
+
+
 </ion-content>
+
+
+

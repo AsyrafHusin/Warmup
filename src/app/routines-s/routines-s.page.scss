@@ -16,12 +16,6 @@ img{
     height: 100px;
     width: 100px;
 }
-ion-tab-bar{
-    // --background: linear-gradient(to right, #color1 0%, #color2 100%);
-    background: linear-gradient(to right, aqua , yellow);
-    height: 30px;
-  
-  }
 
   #bbtn{
     position: absolute;
@@ -35,25 +29,25 @@ ion-tab-bar{
 
 
   round-progress{
-    position: absolute;
-    margin-left: 100px;
+    position: relative;
+    margin:auto;
 
 
   }
 
   .arw{
     margin-top: 100px;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
   }
 
-  .stop{
-    position: absolute;
-    margin-top: 300px;
-  }
+  // .stop{
+  //   position: absolute;
+  //   margin-top: 300px;
+  // }
 
   .progress{
-    position: absolute;
+    position: relative;
     margin-left: 200px; 
     margin-top: 100px;
     

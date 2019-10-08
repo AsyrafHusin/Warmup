@@ -12,7 +12,7 @@ overallProgress:any=0;
 maxTimer = 0
 timer:number = 0
 loop:any = 6;
-// routine:[];
+
 
 intervalA:any=false
 intervalB:any=false
@@ -153,11 +153,7 @@ intervalB:any=false
     this.overallProgress = 0;
     this.loop = 6;
     this.runToast();
-    if(this.started)
-    {
-      return
-    }
-    // const toast = this.toastController.create
+
     this.started = true
     this.timeStart();
     this.showRoutine1();

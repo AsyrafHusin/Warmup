@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, ModalController, PopoverController, ToastController } from '@ionic/angular';
-import { IonRouterOutlet } from '@ionic/angular';
+import { NavController,  ToastController, ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-routines-s',
   templateUrl: './routines-s.page.html',
@@ -12,35 +11,20 @@ export class RoutinesSPage implements OnInit {
   maxTimer = 0
   timer: number = 0
   loop = 6
-  // routine:[];
+
 
   intervalA: any = false
   intervalB: any = false
 
-  constructor(private navCtrl: NavController, private toastCtrl: ToastController, private routerOutlet: IonRouterOutlet) {
+  constructor(private navCtrl: NavController, private toastCtrl: ToastController) {
 
-    let routine: any = [
-      {
-        routine: 'Push up',
-        time: 30
-      },
-      {
-        routine: 'Pull up',
-        time: 15
-      },
-      {
-        routine: 'Sit Up',
-        time: 20
-      }
-    ]
 
     this.maxTimer = 5;
 
+
   }
 
-  ionViewWillEnter(){
-    this.routerOutlet.swipeGesture = false;
-  }
+
 
 
   ngOnInit() {
@@ -59,6 +43,10 @@ export class RoutinesSPage implements OnInit {
     this.stopTimer();
   }
 
+  // async close(){
+  //   await this.modalCtrl.dismiss();
+  //   console.log('close')
+  // }
   async runToast() {
     const toast = await this.toastCtrl.create({
       message: "Starting",
@@ -218,7 +206,7 @@ export class RoutinesSPage implements OnInit {
       this.overallProgress += .2
 
     } else if (this.loop == 3) {
-      this.loop--;
+      this.loop--;  
       this.timer = 0;
       this.showRoutine5();
       this.timeStart();
